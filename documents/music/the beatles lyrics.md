@@ -65,9 +65,164 @@ Since I saw her standing there
 
 ###     02 Misery
 
+The world is treating me bad... Misery
+这个世界总是虐待我 悲伤啊
+I'm the kind of guy
+我这种男人啊
+Who never used to cry
+从不轻易流泪
+The world is treating me bad... Misery
+这个世界总是虐待我 悲伤啊
+I've lost her now for sure
+现在我真的失去了她
+I won't see her no more
+我再也不复见她一面
+It's gonna be a drag... Misery
+真是令人揪心的悲剧啊
+I'll remember all the little things we've done
+我会记得我们曾经做过的点点滴滴
+Can't she see she'll always be the only one, only one
+她还不明白吗 她一直是我心中的唯一 唯一啊
+Send her back to me
+将她送回我身旁吧
+Cos everyone can see
+因为人人可鉴
+Without her I will be in misery
+没有她我会一直悲伤下去
+I'll remember all the little things we've done
+我会记得我们曾经做过的点点滴滴
+She'll remember and she'll miss her only one, lonely one
+她也会回忆并思念起她心中的唯一 那个孤独的人
+Send her back to me
+将她送回我身旁吧
+Cos everyone can see
+因为人人可鉴
+Without her I will be in misery (Oh oh oh)
+没有她我会一直悲伤下去（噢 噢 噢）
+In misery (Ooh ee ooh ooh)
+一直悲伤（噢 噢 噢）
+My misery (La la la la la la)
+我的悲伤（啦啦啦啦啦啦）
+
 ###     03 Anna (Go to Him)
 
+anna,
+安娜
+you come and ask me,girl,
+你来让我
+to set you free,girl,
+放你自由
+you say he loves you more than me,
+你说他比我还要爱你
+so i will set you free,
+所以我会放你自由
+go with him.
+跟他走吧
+go with him.
+跟他走吧
+anna,
+安娜
+girl,before you go now,
+女孩，在你离开之前
+i want you to know,now,
+我想让你知道，现在
+that i still love you so,
+我还如此爱你
+but if he loves you mo',
+但如果他更爱你
+go with him.
+跟他走吧
+all of my life,
+我用尽一生
+i've been searchin'for a girl
+寻找一个女孩
+to love me like i love you.
+像我爱你那样爱我
+oh,now..but every girl i've ever had,
+哦，现在，我曾经拥有过的每个女孩
+breaks my heart and leaves me sad.
+都伤透了我的心让我难过
+what am i,what am i supposed to do.
+我又该，我又该怎么做呢
+anna,
+安娜
+just one more thing,girl.
+还有一个事儿
+you give back your ring to me,and i will set you free,
+把你的戒指还给我，我会放你自由
+go with him.
+跟他走吧
+all of my life,
+我用尽一生
+i've been searchin'for a girl
+寻找一个女孩
+to love me like i love you.
+像我爱你那样爱我
+but let me tell you now but every girl i've ever had,
+但现在我告诉你我曾拥有过的每个女孩
+breaks my heart and leaves me sad.
+都伤透了我的心让我难过
+what am i,what am i supposed to do.
+我又该，我又该怎么做呢
+anna,
+安娜
+just one more thing,girl.
+还有一个事儿
+you give back your ring to me,and i will set you free,
+把你的戒指还给我，我会放你自由
+go with him.
+跟他走吧
+go with him
+跟他走吧
+you can go with him girl
+你可以跟他走
+go with him
+跟他走
+
 ###     04 Chains
+
+Chains, my baby's got me locked up in chains
+枷锁啊 我的宝贝将我紧紧锁住
+And they ain't the kind that you can see
+这不是你能洞悉明察的
+Who, these chains of love got a hold on me, yeah
+这些爱的枷锁将我团团围住 耶
+Chains, well, I can't break away from these chains
+枷锁啊 好吧 我无法从这些枷锁中挣脱
+Can't run around 'cause I'm not free
+也无法转头逃跑 因为我并不自由
+Who, these chains of love won't let me be, yeah
+这些爱的枷锁不会放过我的 耶
+I wanna tell you pretty baby
+美丽的人儿 我想告诉你啊
+I think you're fine
+我觉得你很美
+I'd like to love you
+我爱你啊
+But darling, I'm imprisoned by these chains
+但亲爱的 我囚困在这些枷锁之下
+My baby's got me locked up in chains
+我的宝贝将我紧紧锁住
+And they ain't the kind that you can see
+这不是你能洞悉明察的
+Who, these chains of love got a hold on me, yeah
+这些爱的枷锁将我团团围住 耶
+Please believe me when I tell you
+请相信我对你说的一字一句
+Your lips so sweet I'd like to kiss them
+你的嘴唇如此甜蜜 我好想亲吻它
+But I can't break away from all of these chains
+但我无法从这些枷锁中挣脱
+My baby's got me locked up in chains
+我的宝贝将我紧紧锁住
+And they ain't the kind that you can see
+这不是你能洞悉明察的
+Who, these chains of love got a hold on me, yeah
+这些爱的枷锁将我团团围住 耶
+Chains, chains of love
+枷锁啊 爱的枷锁
+Chains of love…
+爱的枷锁……
 
 ###     05 Boys
 
