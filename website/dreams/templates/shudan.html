@@ -145,9 +145,12 @@
             <div class="ui sticky">
                 <div style="height: 10px;"></div>
                 <div class="ui piled segment">
-                    <div class="ui small header">
-                        细语微言
-                    </div>
+                    <a href="http://www.baidu.com">
+                        <h3 class="ui header">
+                            细语微言
+                        </h3>
+                    </a>
+                    <div class="ui divider"></div>
                     <div>
                         But you and I, we’ve been through that,<br>
                         但是你和我，我们已经超脱<br>
@@ -161,48 +164,60 @@
         </div>
         <div class="eight wide column"  id="sticky-c">
             <div class="ui segment">
-                <div id="article_id">
-                    {{ article.article_body | safe}}
-                </div>
-                {% for article in article_list %}
-                    <div class="ui segment">
-                        {{ article.title }}
+                {% for book in book_list %}
+                    <div class="ui vertical segment grid">
+                        <div class="four wide column">
+                            <a href="http://www.baidu.com">
+                                <img class="ui rounded fluid image" src="{%static 'img/book/'%}{{ book.ISBN }}_{{ book.SHUMING }}.jpg" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了"/>
+                            </a>                    
+                        </div>
+                        <div class="twelve wide column">
+                            <br>
+                            <a href="http://www.baidu.com">
+                                <h3 class="ui dividing header">{{ book.SHUMING }}</h3><br>
+                            </a>
+                            <div class="ui grid">
+                                <div class="five wide column">
+                                    <p><strong>ISBN:</strong>{{ book.ISBN }}</p>
+                                    <p><strong>出版社：</strong>{{ book.CHUBANSHE }}</p>
+                                    <p><strong>出版年：</strong>{{ book.CHUBANNIAN }}</p>
+                                    <p><strong>页数：</strong>{{ book.YESHU }}</p>
+                                    <p><strong>定价：</strong>{{ book.DINGJIA }}</p>
+                                    <p><strong>装帧：</strong>{{ book.ZHUANGZHEN }}</p>
+                                </div>
+                                <div class="eleven wide column">
+                                    <p><strong>作者：</strong>{{ book.ZUOZHE }}</p>
+                                    <p><strong>出品方：</strong>{{ book.CHUPINFANG }}</p>
+                                    <p><strong>副标题：</strong>{{ book.FUBIAOTI }}</p>
+                                    <p><strong>原作名：</strong>{{ book.YUANZUOMING }}</p>
+                                    <p><strong>译者：</strong>{{ book.YIZHE }}</p>
+                                    <p><strong>丛书：</strong>{{ book.CONGSHU }}</p>
+                                </div>
+                            </div>
+                            <div class="ui divider"></div>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
-            <div class="ui segment">
-                <div class="ui vertical segment grid">
-                    <div class="four wide column">
-                        <a href="http://www.baidu.com">
-                            <img class="ui rounded image" src="img/book/9787020097678_潘家洵译易卜生戏剧.jpg" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了"/>
-                        </a>                    
-                    </div>
-                    <div class="twelve wide column">
-                        <a href="http://www.baidu.com">
-                            <h3 class="ui dividing header">然而，很美</h3><br>
-                        </a>
-                        <div class="ui grid">
-                            <div class="five wide column">
-                                <p><strong>ISBN:</strong>9787533937850</p>
-                                <p><strong>出版社：</strong>浙江文艺出版社</p>
-                                <p><strong>出版年：</strong>2013-8-1</p>
-                                <p><strong>页数：</strong>210</p>
-                                <p><strong>定价：</strong>26元</p>
-                                <p><strong>装帧：</strong>平装</p>
-                            </div>
-                            <div class="eleven wide column">
-                                <p><strong>作者：</strong>[英]J.R.R.托尔金著/[英]克里斯托弗·托尔金编/[加拿大]泰德·纳史密斯图</p>
-                                <p><strong>出品方：</strong>上河卓远文化</p>
-                                <p><strong>副标题：</strong>爵士乐之书</p>
-                                <p><strong>原作名：</strong>But Beautiful: A Book about Jazz</p>
-                                <p><strong>译者：</strong>李恒基/徐继曾/桂裕芳/袁树仁/潘丽珍/许渊冲/许钧/杨松河/周克希/张小鲁/张寅德/刘方/陆秉慧/徐和瑾/周国强</p>
-                                <p><strong>丛书：</strong>译林世界文学名著·古典系列</p>
-                            </div>
-                        </div>
-                        <div class="ui divider"></div>
-                    </div>
-                </div>
+            <div style="height: 50px;"></div>
+            <div class="ui center aligned six column grid">
+
+                {% if book_list.has_previous %}
+                    <a class="ui column grey button" href="?page={{ book_list.previous_page_number }}"><i class="angle left icon"></i>上一页</a>
+                {% else %}
+                    <a class="ui column grey disabled button" href="?=page={{ book_list.start_index }}"><i class="angle left icon"></i>上一页</a>
+                {% endif %}
+
+                <div class="ui column"></div>
+
+                {% if book_list.has_next %}
+                    <a class="ui column grey button" href="?page={{ book_list.next_page_number }}">下一页<i class="angle right icon"></i></a>
+                {% else %}
+                    <a class="ui column grey disabled button" href="?=page={{ book_list.end_index }}">下一页<i class="angle right icon"></i></a>
+                {% endif %}
+
             </div>
+            <div style="height: 100px;"></div>
 
         </div>
         <div class="four wide column">
@@ -231,7 +246,17 @@
 
 
     <div class="ui inverted vertical segment">
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 
 
