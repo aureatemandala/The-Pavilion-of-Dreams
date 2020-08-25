@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Library(models.Model):
@@ -21,3 +23,30 @@ class Library(models.Model):
 
     def __str__(self):
         return self.SHUMING
+
+class Kingdom(models.Model):
+    LEIBIE = models.CharField(null=False, blank=True, max_length=50, verbose_name="分类")
+
+    def __str__(self):
+        return self.LEIBIE
+    
+class Phylum(models.Model):
+    LEIBIE = models.CharField(null=False, blank=True, max_length=50, verbose_name="分类")
+    FATHER = models.ForeignKey(Kingdom, on_delete=models.DO_NOTHING, verbose_name="父类别")
+
+    def __str__(self):
+        return self.LEIBIE
+
+
+class Article(models.Model):
+    BIAOTI = models.CharField(null=False, blank=True, max_length=300, verbose_name="标题")
+    ZHENGWEN = RichTextField(verbose_name="正文")
+    ZUOZHE = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="作者")
+    CHUANGJIANSHIJIAN = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    ZUIHOUSHIJIAN = models.DateTimeField(auto_now=True, verbose_name="最后编辑时间")
+    DAFENLEI = models.ForeignKey(Kingdom, on_delete=models.DO_NOTHING, verbose_name="大分类")
+    XIAOFENLEI = models.ForeignKey(Phylum, on_delete=models.DO_NOTHING, verbose_name="小分类")
+    BIAOQIAN = models.CharField(null=False, blank=True, max_length=500, verbose_name="标签")
+
+    def __str__(self):
+        return self.BIAOTI
