@@ -16,6 +16,15 @@
 
 ## 数据与文件
 
+文章类
+标题
+正文
+作者
+创建时间
+大分类
+子分类
+标签
+
 ### 库
 
 所有数据与文件，存放在/datafiles中
@@ -28,4 +37,4 @@
 
 /datafiles/The-Pavilion-of-Dreams/website 存放网站
 
-/datafiles/The-Pavilion-of-Dreams/database 存放数据库文件
+/datafiles/The-Pavilion-of-Dreams/mysql 存放数据库文件

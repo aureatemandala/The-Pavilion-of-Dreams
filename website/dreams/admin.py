@@ -11,12 +11,12 @@ class LibraryAdmin(admin.ModelAdmin):
 
 @admin.register(Kingdom)
 class KingdomAdmin(admin.ModelAdmin):
-    list_display = ("id", "LEIBIE")
+    list_display = ("id", "LEIBIE", "BIEMING")
 
 @admin.register(Phylum)
 class PhylumAdmin(admin.ModelAdmin):
-    list_display = ("id", "LEIBIE", "FATHER")
+    list_display = ("id", "LEIBIE", "BIEMING", "FATHER")
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ("id", "BIAOTI", "CHUANGJIANSHIJIAN")
+    list_display = ("BIAOTI", "id", "CHUANGJIANSHIJIAN")

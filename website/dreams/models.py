@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Library(models.Model):
@@ -26,12 +26,14 @@ class Library(models.Model):
 
 class Kingdom(models.Model):
     LEIBIE = models.CharField(null=False, blank=True, max_length=50, verbose_name="分类")
+    BIEMING = models.CharField(null=False, blank=True, max_length=50, verbose_name="别名")
 
     def __str__(self):
         return self.LEIBIE
     
 class Phylum(models.Model):
     LEIBIE = models.CharField(null=False, blank=True, max_length=50, verbose_name="分类")
+    BIEMING = models.CharField(null=False, blank=True, max_length=50, verbose_name="别名")
     FATHER = models.ForeignKey(Kingdom, on_delete=models.DO_NOTHING, verbose_name="父类别")
 
     def __str__(self):
@@ -40,7 +42,7 @@ class Phylum(models.Model):
 
 class Article(models.Model):
     BIAOTI = models.CharField(null=False, blank=True, max_length=300, verbose_name="标题")
-    ZHENGWEN = RichTextField(verbose_name="正文")
+    ZHENGWEN = RichTextUploadingField(verbose_name="正文")
     ZUOZHE = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="作者")
     CHUANGJIANSHIJIAN = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     ZUIHOUSHIJIAN = models.DateTimeField(auto_now=True, verbose_name="最后编辑时间")
