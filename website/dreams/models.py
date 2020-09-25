@@ -52,3 +52,11 @@ class Article(models.Model):
 
     def __str__(self):
         return self.BIAOTI
+
+class Oracle(models.Model):
+    ZUOZHE = models.CharField(null=False, blank=True, max_length=100, verbose_name="作者")
+    ZUOPIN = models.CharField(null=False, blank=True, max_length=100, verbose_name="作品")
+    ZHENGWEN = RichTextUploadingField(verbose_name="正文")
+
+    def __str__(self):
+        return self.ZUOZHE

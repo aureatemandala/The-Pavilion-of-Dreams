@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from dreams.views import index, shudan
+from dreams.views import index, shudan, book, music, painting, film, ACG, dreams, author, book_review, classical_music, jazz, rock, spirit, the_bealtes, painter, paintings, filmmaker, film_review, animation, comic, game, note, travels, icarus
 from django.conf import settings
 from django.conf.urls.static import static 
 
@@ -25,7 +25,30 @@ urlpatterns = [
     path('', index, name='index'),
     path('shudan/', shudan, name='shudan'),
     path('ckeditor', include('ckeditor_uploader.urls')),
-    path('article/', include('dreams.urls'))
+    path('article/', include('dreams.urls')),
+    path('book/', book, name="book"),
+    path('music/', music, name="music"),
+    path('painting/', painting, name="painting"),
+    path('film/', film, name="film"),
+    path('ACG/', ACG, name="ACG"),
+    path('dreams/', dreams, name="dreams"),
+    path('author/', author, name="author"),
+    path('book_review/', book_review, name="book_review"),
+    path('classical_music/', classical_music, name="classical_music"),
+    path('jazz/', jazz, name="jazz"),
+    path('rock/', rock, name="rock"),
+    path('spirit/', spirit, name="spirit"),
+    path('the_bealtes/', the_bealtes, name="the_bealtes"),
+    path('painter/', painter, name="painter"),
+    path('paintings/', paintings, name="paintings"),
+    path('filmmaker/', filmmaker, name="filmmaker"),
+    path('film_review/', film_review, name="film_review"),
+    path('animation/', animation, name="animation"),
+    path('comic/', comic, name="comic"),
+    path('game/', game, name="game"),
+    path('note/', note, name="note"),
+    path('travels/', travels, name="travels"),
+    path('icarus/', icarus, name="icarus"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

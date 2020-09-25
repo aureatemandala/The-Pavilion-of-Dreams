@@ -1,5 +1,5 @@
 from django.contrib import admin
-from dreams.models import Library, Kingdom, Phylum, Article
+from dreams.models import Library, Kingdom, Phylum, Article, Oracle
 # Register your models here.
 
 #admin.site.register(Library)
@@ -20,3 +20,9 @@ class PhylumAdmin(admin.ModelAdmin):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ("BIAOTI", "id", "CHUANGJIANSHIJIAN")
+
+
+@admin.register(Oracle)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ("ZUOZHE", "id", "ZHENGWEN")
+

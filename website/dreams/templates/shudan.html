@@ -3,7 +3,7 @@
 
 {# 页面标题 #}
 {% block title %}
-忆梦斋-秘藏
+书库——巴别图书馆
 {% endblock %}
 
 {% block base_show %}
@@ -11,31 +11,77 @@
         {% for book in book_list %}
         <div class="ui vertical segment grid">
             <div class="four wide column">
-                <a href="http://www.baidu.com">
+                <a href="https://search.douban.com/book/subject_search?search_text={{ book.ISBN }}">
                     <img class="ui rounded fluid image" src="{%static 'img/book/'%}{{ book.ISBN }}_{{ book.SHUMING }}.jpg" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了"/>
                 </a>                    
             </div>
             <div class="twelve wide column">
-                <br>
-                <a href="http://www.baidu.com">
+                
+                <a href="https://search.douban.com/book/subject_search?search_text={{ book.ISBN }}">
                     <h3 class="ui dividing header">{{ book.SHUMING }}</h3><br>
                 </a>
                 <div class="ui grid">
                     <div class="five wide column">
-                        <p><strong>ISBN:</strong>{{ book.ISBN }}</p>
-                        <p><strong>出版社：</strong>{{ book.CHUBANSHE }}</p>
-                        <p><strong>出版年：</strong>{{ book.CHUBANNIAN }}</p>
-                        <p><strong>页数：</strong>{{ book.YESHU }}</p>
-                        <p><strong>定价：</strong>{{ book.DINGJIA }}</p>
-                        <p><strong>装帧：</strong>{{ book.ZHUANGZHEN }}</p>
+                        {% if book.ISBN %}
+                            <p><strong>ISBN：</strong>{{ book.ISBN }}</p>
+                        {% else %}
+                        {% endif %}
+                                                
+                        {% if book.CHUBANSHE %}
+                            <p><strong>出版社：</strong>{{ book.CHUBANSHE }}</p>
+                        {% else %}
+                        {% endif %}
+                                                
+                        {% if book.CHUBANNIAN %}
+                            <p><strong>出版年：</strong>{{ book.CHUBANNIAN }}</p>
+                        {% else %}
+                        {% endif %}
+                                                
+                        {% if book.YESHU %}
+                            <p><strong>页数：</strong>{{ book.YESHU }}</p>
+                        {% else %}
+                        {% endif %}
+                                                
+                        {% if book.DINGJIA %}
+                            <p><strong>定价：</strong>{{ book.DINGJIA }}</p>
+                        {% else %}
+                        {% endif %}
                     </div>
                     <div class="eleven wide column">
-                        <p><strong>作者：</strong>{{ book.ZUOZHE }}</p>
-                        <p><strong>出品方：</strong>{{ book.CHUPINFANG }}</p>
-                        <p><strong>副标题：</strong>{{ book.FUBIAOTI }}</p>
-                        <p><strong>原作名：</strong>{{ book.YUANZUOMING }}</p>
-                        <p><strong>译者：</strong>{{ book.YIZHE }}</p>
-                        <p><strong>丛书：</strong>{{ book.CONGSHU }}</p>
+                        {% if book.ZUOZHE %}
+                            <p><strong>作者：</strong>{{ book.ZUOZHE }}</p>
+                        {% else %}
+                        {% endif %}
+                        
+                        {% if book.CHUPINFANG %}
+                            <p><strong>出品方：</strong>{{ book.CHUPINFANG }}</p>
+                        {% else %}
+                        {% endif %}
+                        
+                        {% if book.FUBIAOTI %}
+                            <p><strong>副标题：</strong>{{ book.FUBIAOTI }}</p>
+                        {% else %}
+                        {% endif %}
+                        
+                        {% if book.YUANZUOMING %}
+                            <p><strong>原作名：</strong>{{ book.YUANZUOMING }}</p>
+                        {% else %}
+                        {% endif %}
+                        
+                        {% if book.YIZHE %}
+                            <p><strong>译者：</strong>{{ book.YIZHE }}</p>
+                        {% else %}
+                        {% endif %}
+                                                
+                        {% if book.CONGSHU %}
+                            <p><strong>丛书：</strong>{{ book.CONGSHU }}</p>
+                        {% else %}
+                        {% endif %}
+                                                                        
+                        {% if book.ZHUANGZHEN %}
+                            <p><strong>装帧：</strong>{{ book.ZHUANGZHEN }}</p>
+                        {% else %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="ui divider"></div>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{# 页面标题 #}
+{% block title %}
+    {{ article.BIAOTI }}——巴别图书馆
+{% endblock %}
+
+{% block base_show %}
+    <div class="ui segment">
+        <h1 class="ui center aligned huge header">{{ article.BIAOTI }}</h1>
+        <div class="ui tiny center aligned grey header">
+            <span>
+                <i class="pencil alternate icon"></i>作者：{{ article.ZUOZHE }} &nbsp; <i class="clock outline icon"></i>发表于：{{ article.CHUANGJIANSHIJIAN }}
+            </span>
+        </div>
+        <div class="ui divider"></div>
+        {{ article.ZHENGWEN | safe }}
+    </div>
+    <div style="height: 50px;"></div>
+    <div class="ui center aligned six column grid">
+
+        {% if previous_article %}
+            <a class="ui column grey button" href="/article/{{ previous_article.id }}"><i class="angle left icon"></i>上一篇</a>
+        {% else %}
+            <a class="ui column grey disabled button"><i class="angle left icon"></i>上一篇</a>
+        {% endif %}
+
+        <div class="ui column"></div>
+
+        {% if next_article %}
+            <a class="ui column grey button" href="/article/{{ next_article.id }}">下一篇<i class="angle right icon"></i></a>
+        {% else %}
+            <a class="ui column grey disabled button">下一篇<i class="angle right icon"></i></a>
+        {% endif %}
+
+    </div>
+{% endblock %}

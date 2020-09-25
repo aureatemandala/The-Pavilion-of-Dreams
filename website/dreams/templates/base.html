@@ -18,7 +18,7 @@
 
     <script>
         $(function () {
-            $('.ui.dropdown').dropdown();
+            $('.ui.dropdown').dropdown({transition: 'drop', on: 'hover' });
             $('.ui.sticky').sticky({
                 context: $('#sitcky-c').data(),
             });
@@ -36,84 +36,66 @@
     <div id="bander">
 
         <div class="ui fixed inverted menu" style="z-index:9999">
-            <div class="header item">忆梦斋</div>
+            <div class="header item">巴别图书馆</div>
             <a class="item" href="/">首页</a>
             <div class="ui dropdown item">
-                书籍
+                <a href="/book?page=1">书籍</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
                     <a href="/shudan?page=1" class="item">书库</a>
-                    <div class="item">书评</div>
+                    <a href="/author?page=1" class="item">作家</a>
+                    <a href="/book_review?page=1" class="item">书评</a>
                 </div>
             </div>
             <div class="ui dropdown item">
-                音乐
+                <a href="/music?page=1">音乐</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <div class="item">Action</div>
-                    <div class="item">Another Action</div>
-                    <div class="item">Something else here</div>
-                    <div class="divider"></div>
-                    <div class="item">Separated Link</div>
-                    <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <a href="/classical_music?page=1" class="item">古典音乐</a>
+                    <a href="/jazz?page=1" class="item">爵士乐</a>
+                    <a href="/rock?page=1" class="item">摇滚乐</a>
+                    <a href="/spirit?page=1" class="item">古灵精怪</a>
+                    <a href="/the_bealtes?page=1" class="item">披头士歌词合集</a>
                 </div>
             </div>
             <div class="ui dropdown item">
-                绘画
+                <a href="/painting?page=1">绘画</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <div class="item">Action</div>
-                    <div class="item">Another Action</div>
-                    <div class="item">Something else here</div>
-                    <div class="divider"></div>
-                    <div class="item">Separated Link</div>
-                    <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <a href="/painter?page=1" class="item">画家</a>
+                    <a href="/paintings?page=1" class="item">画作</a>
                 </div>
             </div>
             <div class="ui dropdown item">
-                电影
+                <a href="/film?page=1">电影</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <div class="item">Action</div>
-                    <div class="item">Another Action</div>
-                    <div class="item">Something else here</div>
-                    <div class="divider"></div>
-                    <div class="item">Separated Link</div>
-                    <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <a href="/filmmaker?page=1" class="item">影人</a>
+                    <a href="/film_review?page=1" class="item">影评</a>
                 </div>
             </div>
             <div class="ui dropdown item">
-                ACG
+                <a href="/ACG?page=1">ACG</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <div class="item">Action</div>
-                    <div class="item">Another Action</div>
-                    <div class="item">Something else here</div>
-                    <div class="divider"></div>
-                    <div class="item">Separated Link</div>
-                    <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <a href="/animation?page=1" class="item">动画</a>
+                    <a href="/comic?page=1" class="item">漫画</a>
+                    <a href="/game?page=1" class="item">游戏</a>
                 </div>
             </div>
             <div class="ui dropdown item">
-                忆梦臆语
+                <a href="/dreams?page=1">奇想臆语</a>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <div class="item">Action</div>
-                    <div class="item">Another Action</div>
-                    <div class="item">Something else here</div>
+                    <a href="/note?page=1" class="item">三闲笔记</a>
+                    <a href="/travels?page=1" class="item">游记</a>
                     <div class="divider"></div>
-                    <div class="item">Separated Link</div>
-                    <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <a href="/icarus?page=1" class="item">伊卡洛斯</a>
                 </div>
             </div>
             <a class="item">关于</a>
 
-            <div class="right menu">
+            <!-- <div class="right menu">
                 <div class="item">
                     <div class="ui transparent inverted icon input">
                         <i class="search icon"></i>
@@ -121,11 +103,11 @@
                     </div>
                 </div>
                 <a class="item">手气不错</a>
-            </div>
+            </div> -->
         </div>
 
 
-        <img class="ui image" src="{%static 'img/illust_54032339_20200102_160244.jpg'%}" alt="测试">
+        <img class="ui image" src="{%static 'img/illust_54032339_20200102_160244.jpg'%}" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了">
 
 
     </div>
@@ -144,13 +126,12 @@
                         细语微言
                     </div>
                     <div>
-                        But you and I, we’ve been through that,<br>
-                        但是你和我，我们已经超脱<br>
-                        and this is not our fate<br>
-                        我们的命运不该这样<br>
+                        {{ oracle.ZHENGWEN | safe }}
                     </div>
-                    <div style="float: right;">——bob gylon鲍勃迪伦</div>
-                    <div style="height: 20px;"></div>
+                    <br>
+                    <div style="float: right;">——{{ oracle.ZUOZHE }}</div>
+                    <div style="float: right;">{{ oracle.ZUOPIN }}</div>
+                    <div style="height: 50px;"></div>
                 </div>
             </div>
         </div>
@@ -170,7 +151,7 @@
                       <img src="{%static 'img/illust_62199837_20190404_152457.jpg'%}">
                     </div>
                     <div class="content">
-                      <a class="header">Kristy</a>
+                      <a class="header">Nimrod</a>
                       <div class="meta">
                         <span class="date">2013年加入</span>
                       </div>
@@ -188,7 +169,17 @@
 
 
     <div class="ui inverted vertical segment">
-
+        <div class="ui grid">
+            <div class="three wide column"></div>
+            <div class="three wide column">
+                <div class="ui inverted header">
+                    关于巴别图书馆
+                </div>
+            </div>
+            <div class="three wide column">
+            </div>
+            <div class="three wide column">联系我</div>
+        </div>
     </div>
 
 

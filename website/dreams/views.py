@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.template import Context, Template
-from dreams.models import Library, Article
+from dreams.models import Library, Article, Oracle
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+import random
+
 
 # Create your views here.
 def index(request):
@@ -10,9 +12,16 @@ def index(request):
 
     article_list = Article.objects.all()
     context['article_list'] = article_list
+
+
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
     index_page = render(request,'index.html',context)
 
     return index_page
+
+
+
 
 def shudan(request):
 
@@ -21,7 +30,6 @@ def shudan(request):
     page_robot = Paginator(book_list, 10)
     page_num = request.GET.get('page')
     
-
     try:
         book_list = page_robot.page(page_num)
     except EmptyPage:
@@ -29,17 +37,543 @@ def shudan(request):
     except PageNotAnInteger:
         book_list = page_robot.page(1)
 
-
-
-
     context['book_list'] = book_list
+
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
     index_page = render(request,'shudan.html',context)
 
     return index_page
 
-def shuping(request, article_id):
+
+
+def article(request, article_id):
     context = {}
 
-    context['article'] = get_object_or_404(Article, id=article_id)
-    index_page = render(request, 'shuping.html', context)
+    article = get_object_or_404(Article, id=article_id)
+    context['article'] = article
+    context[ 'previous_article' ] = Article.objects.filter(id__lt=article.id).last()
+    context[ 'next_article' ] = Article.objects.filter(id__gt=article.id).first()
+
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request, 'article.html', context)
+    return index_page
+
+
+def book(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="1")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def music(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="2")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+
+    
+def painting(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="3")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+
+    
+def film(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="4")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+
+    
+def ACG(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="5")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+
+    
+def dreams(request):
+    context = {}
+
+    article_list = Article.objects.filter(DAFENLEI="6")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+
+def author(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="1")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def book_review(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="2")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def classical_music(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="3")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def jazz(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="4")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def rock(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="5")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def spirit(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="6")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def the_bealtes(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="7")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def painter(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="8")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def paintings(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="9")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def filmmaker(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="10")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def film_review(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="11")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def animation(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="12")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def comic(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="13")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def game(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="14")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def note(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="15")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def travels(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="16")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
+    return index_page
+
+def icarus(request):
+    context = {}
+
+    article_list = Article.objects.filter(XIAOFENLEI="17")
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+    
+    context['article_list'] = article_list
+    
+    oracle_list = Oracle.objects.all()
+    context['oracle'] = random.choice(oracle_list)
+
+    index_page = render(request,'index.html',context)
     return index_page

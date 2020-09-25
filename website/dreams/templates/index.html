@@ -2,14 +2,14 @@
 
 {# 页面标题 #}
 {% block title %}
-忆梦斋
+巴别图书馆
 {% endblock %}
 
 {% block base_show %}
     <div class="ui segment">
         {% for article in article_list %}
             <div class="ui vertical segment">
-                <a class="ui huge header" href="{% url 'shuping' article.id %}">&nbsp; {{ article.BIAOTI }}</a>
+                <a class="ui huge header" href="{% url 'article' article.id %}">&nbsp; {{ article.BIAOTI }}</a>
                 <div class="ui tiny grey header">
                     <span>
                         <i class="pencil alternate icon"></i>作者：{{ article.ZUOZHE }} &nbsp; <i class="clock outline icon"></i>发表于：{{ article.CHUANGJIANSHIJIAN }}
@@ -17,9 +17,27 @@
                 </div>
                 <div>{{ article.ZHENGWEN | truncatechars:200 | safe}}</div>
                 <div style="height: 20px;"></div>
-                <a class="ui right floated blue button" href="{% url 'shuping' article.id %}"><i class="eye icon"></i>阅读更多</a>
+                <a class="ui right floated blue button" href="{% url 'article' article.id %}"><i class="eye icon"></i>阅读更多</a>
                 <div style="height: 50px;"></div>
             </div>
         {% endfor %}
+    </div>
+    <div style="height: 50px;"></div>
+    <div class="ui center aligned six column grid">
+
+        {% if article_list.has_previous %}
+            <a class="ui column grey button" href="?page={{ article_list.previous_page_number }}"><i class="angle left icon"></i>上一页</a>
+        {% else %}
+            <a class="ui column grey disabled button" href="?=page={{ article_list.start_index }}"><i class="angle left icon"></i>上一页</a>
+        {% endif %}
+
+        <div class="ui column"></div>
+
+        {% if article_list.has_next %}
+            <a class="ui column grey button" href="?page={{ article_list.next_page_number }}">下一页<i class="angle right icon"></i></a>
+        {% else %}
+            <a class="ui column grey disabled button" href="?=page={{ article_list.end_index }}">下一页<i class="angle right icon"></i></a>
+        {% endif %}
+
     </div>
 {% endblock %}
