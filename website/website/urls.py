@@ -18,13 +18,14 @@ from django.urls import path, include
 from dreams.views import index, shudan, book, music, painting, film, ACG, dreams, author, book_review, classical_music, jazz, rock, spirit, the_bealtes, painter, paintings, filmmaker, film_review, animation, comic, game, note, travels, icarus
 from django.conf import settings
 from django.conf.urls.static import static 
-
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('shudan/', shudan, name='shudan'),
     path('ckeditor', include('ckeditor_uploader.urls')),
+    path("favicon.ico",RedirectView.as_view(url='media/favicon.ico')),
     path('article/', include('dreams.urls')),
     path('book/', book, name="book"),
     path('music/', music, name="music"),

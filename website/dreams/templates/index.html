@@ -15,7 +15,10 @@
                         <i class="pencil alternate icon"></i>作者：{{ article.ZUOZHE }} &nbsp; <i class="clock outline icon"></i>发表于：{{ article.CHUANGJIANSHIJIAN }}
                     </span>
                 </div>
-                <div>{{ article.ZHENGWEN | truncatechars:200 | safe}}</div>
+                <!-- <div>{{ article.ZHENGWEN | slice:200 | safe}}</div> -->
+                <div>
+                    {{ article.ZHENGWEN | striptags | slice:200 | safe }}
+                </div>
                 <div style="height: 20px;"></div>
                 <a class="ui right floated blue button" href="{% url 'article' article.id %}"><i class="eye icon"></i>阅读更多</a>
                 <div style="height: 50px;"></div>

@@ -10,7 +10,18 @@ import random
 def index(request):
     context = {}
 
-    article_list = Article.objects.all()
+    article_list = Article.objects.all().order_by('-id')
+
+    page_robot = Paginator(article_list, 10)
+    page_num = request.GET.get('page')
+    
+    try:
+        article_list = page_robot.page(page_num)
+    except EmptyPage:
+        article_list = page_robot.page(page_robot.num_pages)
+    except PageNotAnInteger:
+        article_list = page_robot.page(1)
+
     context['article_list'] = article_list
 
 
@@ -66,7 +77,7 @@ def article(request, article_id):
 def book(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="1")
+    article_list = Article.objects.filter(DAFENLEI="1").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -88,7 +99,7 @@ def book(request):
 def music(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="2")
+    article_list = Article.objects.filter(DAFENLEI="2").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -112,7 +123,7 @@ def music(request):
 def painting(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="3")
+    article_list = Article.objects.filter(DAFENLEI="3").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -136,7 +147,7 @@ def painting(request):
 def film(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="4")
+    article_list = Article.objects.filter(DAFENLEI="4").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -160,7 +171,7 @@ def film(request):
 def ACG(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="5")
+    article_list = Article.objects.filter(DAFENLEI="5").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -184,7 +195,7 @@ def ACG(request):
 def dreams(request):
     context = {}
 
-    article_list = Article.objects.filter(DAFENLEI="6")
+    article_list = Article.objects.filter(DAFENLEI="6").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -207,7 +218,7 @@ def dreams(request):
 def author(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="1")
+    article_list = Article.objects.filter(XIAOFENLEI="1").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -229,7 +240,7 @@ def author(request):
 def book_review(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="2")
+    article_list = Article.objects.filter(XIAOFENLEI="2").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -251,7 +262,7 @@ def book_review(request):
 def classical_music(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="3")
+    article_list = Article.objects.filter(XIAOFENLEI="3").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -273,7 +284,7 @@ def classical_music(request):
 def jazz(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="4")
+    article_list = Article.objects.filter(XIAOFENLEI="4").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -295,7 +306,7 @@ def jazz(request):
 def rock(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="5")
+    article_list = Article.objects.filter(XIAOFENLEI="5").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -317,7 +328,7 @@ def rock(request):
 def spirit(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="6")
+    article_list = Article.objects.filter(XIAOFENLEI="6").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -339,7 +350,7 @@ def spirit(request):
 def the_bealtes(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="7")
+    article_list = Article.objects.filter(XIAOFENLEI="7").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -355,13 +366,13 @@ def the_bealtes(request):
     oracle_list = Oracle.objects.all()
     context['oracle'] = random.choice(oracle_list)
 
-    index_page = render(request,'index.html',context)
+    index_page = render(request,'thebeatleslrc.html',context)
     return index_page
 
 def painter(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="8")
+    article_list = Article.objects.filter(XIAOFENLEI="8").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -383,7 +394,7 @@ def painter(request):
 def paintings(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="9")
+    article_list = Article.objects.filter(XIAOFENLEI="9").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -405,7 +416,7 @@ def paintings(request):
 def filmmaker(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="10")
+    article_list = Article.objects.filter(XIAOFENLEI="10").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -427,7 +438,7 @@ def filmmaker(request):
 def film_review(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="11")
+    article_list = Article.objects.filter(XIAOFENLEI="11").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -449,7 +460,7 @@ def film_review(request):
 def animation(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="12")
+    article_list = Article.objects.filter(XIAOFENLEI="12").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -471,7 +482,7 @@ def animation(request):
 def comic(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="13")
+    article_list = Article.objects.filter(XIAOFENLEI="13").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -493,7 +504,7 @@ def comic(request):
 def game(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="14")
+    article_list = Article.objects.filter(XIAOFENLEI="14").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -515,7 +526,7 @@ def game(request):
 def note(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="15")
+    article_list = Article.objects.filter(XIAOFENLEI="15").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -537,7 +548,7 @@ def note(request):
 def travels(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="16")
+    article_list = Article.objects.filter(XIAOFENLEI="16").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 
@@ -559,7 +570,7 @@ def travels(request):
 def icarus(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="17")
+    article_list = Article.objects.filter(XIAOFENLEI="17").order_by('-id')
     page_robot = Paginator(article_list, 10)
     page_num = request.GET.get('page')
 

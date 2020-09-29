@@ -19,7 +19,7 @@ class PhylumAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ("BIAOTI", "id", "CHUANGJIANSHIJIAN")
+    list_display = ("BIAOTI", "id", "CHUANGJIANSHIJIAN", "DAFENLEI", "XIAOFENLEI")
 
 
 @admin.register(Oracle)

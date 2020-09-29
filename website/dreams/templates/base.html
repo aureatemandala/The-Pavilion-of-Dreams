@@ -22,7 +22,7 @@
             $('.ui.sticky').sticky({
                 context: $('#sitcky-c').data(),
             });
-            
+            $('.ui.accordion').accordion();
         })
     </script>
 
@@ -107,7 +107,7 @@
         </div>
 
 
-        <img class="ui image" src="{%static 'img/illust_54032339_20200102_160244.jpg'%}" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了">
+        <img class="ui image" src="{%static 'img/bg/1.jpg'%}" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了">
 
 
     </div>
@@ -162,6 +162,7 @@
                     </div>
                 </div>
             </div>
+            <div style="height: 10px;"></div>
         </div>
 
     </div>
@@ -170,15 +171,59 @@
 
     <div class="ui inverted vertical segment">
         <div class="ui grid">
-            <div class="three wide column"></div>
-            <div class="three wide column">
-                <div class="ui inverted header">
-                    关于巴别图书馆
+            <div class="four wide column"></div>
+            <div class="one wide column">
+                <div class="ui inverted">
+                    <br>
+                    <div class="ui inverted header">
+                        关于
+                    </div>
+                    <br>
+                    <div class="ui inverted">
+                        缘起
+                    </div>
+                    <br>
+                    <a href="https://www.zhihu.com/column/blibrary" class="ui inverted">
+                        知乎专栏
+                    </a>
+                    <br>
                 </div>
             </div>
-            <div class="three wide column">
+            <div class="two wide column">
+                <br>
+                <div>
+                    <div class="ui tiny center aligned inverted header">微信公众号</div>
+                    <img class="ui small rounded centered image" src="{%static 'img/wechat.png'%}" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了">
+                </div>
+                <br>
             </div>
-            <div class="three wide column">联系我</div>
+            <div class="two wide column">
+                <br>
+                <div>
+                    <div class="ui tiny center aligned inverted header">知乎专栏</div>
+                    <a href="https://www.zhihu.com/column/blibrary">
+                        <img class="ui small rounded centered image" src="{%static 'img/zhihu.png'%}" alt="...(｡•ˇ‸ˇ•｡)...图片加载失败了">
+                    </a>
+                </div>
+                <br>
+            </div>
+            <div class="three wide column">
+                <div class="ui inverted">
+                    <div style="height: 20px;"></div>
+                    <div class="ui small inverted header">
+                        <div>
+                            然而你的庞大的图书馆要在一瞬间，在一个人的身上，得到证明。<br>
+                        </div>
+                        <div style="float: right;">
+                            ——博尔赫斯
+                        </div>
+                    </div>
+                    <div style="height: 36px;"></div>
+                    <div class="ui tiny grey center aligned inverted header">
+                        Powered by 忆梦先生
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
