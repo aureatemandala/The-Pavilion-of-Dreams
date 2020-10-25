@@ -341,3 +341,656 @@ worker 2 buried after 1 seconds
 goodbye to uWSGI.
 VACUUM: pidfile removed.
 VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Sep 30 16:55:09 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x7d5ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7d5ad0 pid: 2141 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2141)
+spawned uWSGI worker 1 (pid: 2144, cores: 1)
+spawned uWSGI worker 2 (pid: 2145, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Fri Oct  2 09:55:59 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x2f488ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x2f488ad0 pid: 2187 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2187)
+spawned uWSGI worker 1 (pid: 2191, cores: 1)
+spawned uWSGI worker 2 (pid: 2192, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Fri Oct  2 10:08:51 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x91fcad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x91fcad0 pid: 2316 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2316)
+spawned uWSGI worker 1 (pid: 2319, cores: 1)
+spawned uWSGI worker 2 (pid: 2320, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Oct  6 09:12:21 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x20da3ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x20da3ad0 pid: 1139 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1139)
+spawned uWSGI worker 1 (pid: 1142, cores: 1)
+spawned uWSGI worker 2 (pid: 1143, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+Tue Oct  6 09:13:18 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /shudan/?page=2 (ip 192.168.31.189) !!!
+Tue Oct  6 09:13:18 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /shudan/?page=2 (192.168.31.189)
+OSError: write error
+Thu Oct  8 00:30:57 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.31.189) !!!
+Thu Oct  8 00:30:57 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (192.168.31.189)
+OSError: write error
+Thu Oct  8 01:57:53 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /filmmaker (ip 192.168.31.189) !!!
+Thu Oct  8 01:57:53 2020 - uwsgi_response_write_headers_do(): Broken pipe [core/writer.c line 248] during GET /filmmaker (192.168.31.189)
+OSError: write error
+Internal Server Error: /the_bealtes/
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./dreams/views.py", line 369, in the_bealtes
+    index_page = render(request,'thebeatleslrc.html',context)
+  File "/usr/local/lib64/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib64/python3.6/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/usr/local/lib64/python3.6/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib64/python3.6/site-packages/django/template/base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: 's' from ''img/beatles/small/Sgt. Pepper's'
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon-152x152-precomposed.png
+Not Found: /apple-touch-icon-152x152.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon.png
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Oct 10 11:48:37 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x2838cad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2838cad0 pid: 7359 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7359)
+spawned uWSGI worker 1 (pid: 7362, cores: 1)
+spawned uWSGI worker 2 (pid: 7363, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Oct 10 12:05:08 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0xb169ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 12 seconds on interpreter 0xb169ad0 pid: 1122 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1122)
+spawned uWSGI worker 1 (pid: 1128, cores: 1)
+spawned uWSGI worker 2 (pid: 1129, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Oct 10 15:40:05 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x29ac5ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x29ac5ad0 pid: 1801 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1801)
+spawned uWSGI worker 1 (pid: 1804, cores: 1)
+spawned uWSGI worker 2 (pid: 1805, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+Sun Oct 11 01:45:04 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /shudan/?page=1 (ip 192.168.31.189) !!!
+Sun Oct 11 01:45:04 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /shudan/?page=1 (192.168.31.189)
+OSError: write error
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+Mon Oct 12 15:54:50 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.31.189) !!!
+Mon Oct 12 15:54:50 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (192.168.31.189)
+OSError: write error
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Oct 14 11:27:19 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x75b5ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x75b5ad0 pid: 7746 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7746)
+spawned uWSGI worker 1 (pid: 7749, cores: 1)
+spawned uWSGI worker 2 (pid: 7750, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Oct 14 11:28:30 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on 0.0.0.0:8080 fd 3
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 6
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0xe01d070
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xe01d070 pid: 7758 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7758)
+spawned uWSGI worker 1 (pid: 7761, cores: 1)
+spawned uWSGI worker 2 (pid: 7762, cores: 1)
+spawned uWSGI http 1 (pid: 7763)
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/img/bg/1.jpg
+Not Found: /static/img/wechat.png
+Not Found: /static/img/illust_62199837_20190404_152457.jpg
+Not Found: /static/img/zhihu.png
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/changelists.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/forms.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+Not Found: /static/ckeditor/ckeditor-init.js
+Not Found: /static/ckeditor/ckeditor/ckeditor.js
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/ckeditor/ckeditor/ckeditor.js
+Not Found: /static/admin/js/change_form.js
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/prepopulate_init.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/img/icon-changelink.svg
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/img/icon-addlink.svg
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/img/icon-deletelink.svg
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/change_form.js
+Not Found: /static/admin/img/icon-changelink.svg
+Not Found: /static/admin/img/icon-addlink.svg
+Not Found: /static/admin/img/icon-deletelink.svg
+Not Found: /static/admin/js/prepopulate_init.js
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/changelists.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+Not Found: /static/admin/js/vendor/jquery/jquery.js
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/img/bg/1.jpg
+Not Found: /static/img/illust_62199837_20190404_152457.jpg
+Not Found: /static/img/wechat.png
+Not Found: /static/img/zhihu.png
+Not Found: /static/img/bg/1.jpg
+Not Found: /static/img/illust_62199837_20190404_152457.jpg
+Not Found: /static/img/wechat.png
+Not Found: /static/img/zhihu.png
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 7763)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Oct 14 11:30:34 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x17d08ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x17d08ad0 pid: 7810 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7810)
+spawned uWSGI worker 1 (pid: 7813, cores: 1)
+spawned uWSGI worker 2 (pid: 7814, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Oct 14 13:08:44 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /DATAFILES/The-Pavilion-of-Dreams/website
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x20774ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x20774ad0 pid: 8190 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8190)
+spawned uWSGI worker 1 (pid: 8193, cores: 1)
+spawned uWSGI worker 2 (pid: 8194, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Oct 18 15:56:58 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/nimrod
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x3c15bab0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x3c15bab0 pid: 1112 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1112)
+spawned uWSGI worker 1 (pid: 1115, cores: 1)
+spawned uWSGI worker 2 (pid: 1116, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Oct 18 16:27:20 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 02 August 2020 09:48:03
+os: Linux-5.4.28-v8.1.el7 #1 SMP PREEMPT Mon Mar 30 21:28:10 UTC 2020
+nodename: Sebastian
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/nimrod
+writing pidfile to /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /DATAFILES/The-Pavilion-of-Dreams/website
+your processes number limit is 4096
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock fd 3
+Python version: 3.6.8 (default, Apr  2 2020, 01:23:05)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x345b9ab0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218760 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x345b9ab0 pid: 1125 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1125)
+spawned uWSGI worker 1 (pid: 1128, cores: 1)
+spawned uWSGI worker 2 (pid: 1129, cores: 1)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+./dreams/views.py:41: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'dreams.models.Library'> QuerySet.
+  page_robot = Paginator(book_list, 10)
+Fri Oct 23 09:33:50 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /article/210 (ip 192.168.31.189) !!!
+Fri Oct 23 09:33:50 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /article/210 (192.168.31.189)
+OSError: write error
+Fri Oct 23 11:02:40 2020 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /article/210 (ip 192.168.31.189) !!!
+Fri Oct 23 11:02:40 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /article/210 (192.168.31.189)
+OSError: write error
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /DATAFILES/The-Pavilion-of-Dreams/website/uwsgi_conf/uwsgi.sock removed.

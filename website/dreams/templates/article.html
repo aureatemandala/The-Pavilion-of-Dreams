@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
+
+{# 自定义CSS #}
+{% block DIYCSS %}
+<style type="text/css">
+    p {
+        line-height: 2em;
+    }
+</style>
+{% endblock %}
+
+
 {# 页面标题 #}
 {% block title %}
     {{ article.BIAOTI }}——巴别图书馆

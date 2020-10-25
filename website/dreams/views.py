@@ -350,18 +350,18 @@ def spirit(request):
 def the_bealtes(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="7").order_by('-id')
-    page_robot = Paginator(article_list, 10)
-    page_num = request.GET.get('page')
+    # article_list = Article.objects.filter(XIAOFENLEI="7").order_by('-id')
+    # page_robot = Paginator(article_list, 10)
+    # page_num = request.GET.get('page')
 
-    try:
-        article_list = page_robot.page(page_num)
-    except EmptyPage:
-        article_list = page_robot.page(page_robot.num_pages)
-    except PageNotAnInteger:
-        article_list = page_robot.page(1)
+    # try:
+    #     article_list = page_robot.page(page_num)
+    # except EmptyPage:
+    #     article_list = page_robot.page(page_robot.num_pages)
+    # except PageNotAnInteger:
+    #     article_list = page_robot.page(1)
     
-    context['article_list'] = article_list
+    # context['article_list'] = article_list
     
     oracle_list = Oracle.objects.all()
     context['oracle'] = random.choice(oracle_list)
@@ -570,21 +570,21 @@ def travels(request):
 def icarus(request):
     context = {}
 
-    article_list = Article.objects.filter(XIAOFENLEI="17").order_by('-id')
-    page_robot = Paginator(article_list, 10)
-    page_num = request.GET.get('page')
+    # article_list = Article.objects.filter(XIAOFENLEI="17").order_by('-id')
+    # page_robot = Paginator(article_list, 10)
+    # page_num = request.GET.get('page')
 
-    try:
-        article_list = page_robot.page(page_num)
-    except EmptyPage:
-        article_list = page_robot.page(page_robot.num_pages)
-    except PageNotAnInteger:
-        article_list = page_robot.page(1)
+    # try:
+    #     article_list = page_robot.page(page_num)
+    # except EmptyPage:
+    #     article_list = page_robot.page(page_robot.num_pages)
+    # except PageNotAnInteger:
+    #     article_list = page_robot.page(1)
     
-    context['article_list'] = article_list
+    # context['article_list'] = article_list
     
     oracle_list = Oracle.objects.all()
     context['oracle'] = random.choice(oracle_list)
 
-    index_page = render(request,'index.html',context)
+    index_page = render(request,'icarus.html',context)
     return index_page
